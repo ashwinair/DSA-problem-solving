@@ -5,7 +5,7 @@ public class reversal_algo_array {
     public static void main(String[] args) {
 
         int[] ar = {1, 2, 3, 4, 5};//considering array is already sorted
-        rotate(ar, 1);
+        rotate(ar, 2);
 //        Time Complexity : O(n)
 //        (means that the algorithm's maximum running time is proportional to the input size.)
     }
@@ -17,9 +17,9 @@ public class reversal_algo_array {
         if (d == 0) {
             return;
         }
-        reverseArray(ar, 0, d - 1);     //reverse A(0.....d-1)
-        reverseArray(ar, d, n - 1);         //reverse B(d.....n-1)
-        reverseArray(ar, 0, n - 1);     //reverse BA(0.....n-1)
+        reverseArray(ar, 0, d - 1);//reverse A(0.....d-1)
+        reverseArray(ar, d, n - 1);    //reverse B(d.....n-1)
+        reverseArray(ar, 0, n - 1);   //reverse BA(0.....n-1)
 
         print(ar, n);
     }
