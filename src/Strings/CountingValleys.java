@@ -7,7 +7,6 @@ package Strings;
 //        A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a step up to sea level.
 //
 //        Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.
-
 public class CountingValleys {
     public static void main(String[] args) {
         String path = "UDDDUDUU";
