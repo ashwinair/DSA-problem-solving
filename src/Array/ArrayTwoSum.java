@@ -1,6 +1,9 @@
 package Array;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Vector;
 
 public class ArrayTwoSum {
 
@@ -11,15 +14,27 @@ public class ArrayTwoSum {
     }
 
     public static int[] twoSum(int[] nums, int target) {
-        int i, j;
-
-        for (i = 0; i < nums.length; i++) {
-            for (j = 0; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target && i != j) {
-                    return new int[]{i, j};//returns the pointer value(address)
-                }
+        //HashTable approach O(n)
+        Map<Integer, Integer> map = new HashMap<>();
+        Vector<Integer> ar;
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
             }
+            map.put(nums[i], i);
         }
-        return new int[]{0};
+
+        throw new IllegalArgumentException("No two sum solution");
+
+// Brute Force approach O(n2) time
+//        for (i = 0; i < nums.length; i++) {
+//            for (j = 0; j < nums.length; j++) {
+//                if (nums[i] + nums[j] == target && i != j) {
+//                    return new int[]{i, j};//returns the pointer value(address)
+//                }
+//            }
+//        }
+//        return new int[]{0};
     }
 }
