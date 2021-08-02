@@ -3,7 +3,6 @@ package Array;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Vector;
 
 public class ArrayTwoSum {
 
@@ -16,7 +15,7 @@ public class ArrayTwoSum {
     public static int[] twoSum(int[] nums, int target) {
         //HashTable approach O(n)
         Map<Integer, Integer> map = new HashMap<>();
-        Vector<Integer> ar;
+
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if (map.containsKey(complement)) {

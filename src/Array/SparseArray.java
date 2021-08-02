@@ -9,8 +9,32 @@ import java.util.Map;
 public class SparseArray {
 
     public static void main(String[] args) {
-//        matchingStrings();
+
     }
+
+    public static long arrayManipulation(int n, int[][] queries) {
+
+        long[] arr = new long[n + 2];
+        long maxResult = Long.MIN_VALUE;
+        long sum = 0;
+
+        for (int[] query : queries) {
+            int a = query[0];
+            int b = query[1];
+            int k = query[2];
+            arr[a] += k;
+            arr[b + 1] -= k;
+
+        }//storing values in array
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            maxResult = Math.max(maxResult, arr[i]);
+        }
+        return maxResult;
+
+    }
+
 
     public static List<Integer> matchingStrings(List<String> strings, List<String> queries) {
 

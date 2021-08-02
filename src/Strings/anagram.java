@@ -36,7 +36,7 @@ public class anagram {
         return map.size();
     }
 
-    //2nd better and fast
+    //2nd solution better and fast
     private static int minSteps2(String s, String t) {
         int n = s.length();
         int ans = 0;
