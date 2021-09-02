@@ -4,7 +4,7 @@ import java.util.Arrays;
 // when given nos. range from 1 - n then use cyclic sort..
 public class CyclicSort {
     public static void main(String[] args) {
-        int[] arr ={4,2,5,3,1};
+        int[] arr ={3,5,1,10,9,4,2,7};
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
