@@ -1,8 +1,6 @@
 package CyclicSort;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class cyclic {
     public static void main(String[] args)
@@ -10,27 +8,16 @@ public class cyclic {
         int[] array1 = {4,5,2,3};
         int[] array2 = {2, 1, 5, 2, 9, 1, 2, 3, 3, 4, 4, 5, 6, 7, 8};
 
-        cyclic sorter = new cyclic();
-        sorter.cycleSort(array1);
-//        sorter.cycleSort(array2);
-        System.out.println(findDisappearedNumbers(array1));
+        cycleSort(array1);
+        cycleSort(array2);
+
 
         System.out.println(Arrays.toString(array1));
         System.out.println(Arrays.toString(array2));
     }
-    public static List<Integer> findDisappearedNumbers(int[] arr) {
-        ArrayList<Integer> ans = new ArrayList<>();
-        int last = arr[arr.length-1];
-        int first = arr[0];
-        for (int index = 1; index < last; index++) {
-            if(index != arr[index-1]){
-                ans.add(index+1);
-            }
-        }
-        return ans;
-    }
 
-    void cycleSort(int[] array)
+
+    static void cycleSort(int[] array)
     {
         // step 1: loop from the beginning of the array to the second to last item
         for (int currentIndex = 0; currentIndex < array.length - 1; currentIndex++)
