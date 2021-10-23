@@ -2,11 +2,11 @@ package Recursion;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int target = 50;
-        int[] arr = {1,2,3,40,50,66,76,80,84,100};
+        int target = 20;
+        int[] arr = {1, 2, 3, 40, 50, 66, 76, 80, 84, 100};
         int start = 0;
-        int end = arr.length -1;
-       int result =  search(target,arr,start,end);
+        int end = arr.length - 1;
+        int result = search(target, arr, start, end);
         System.out.println(result);
     }
 
